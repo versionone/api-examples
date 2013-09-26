@@ -20,13 +20,13 @@ namespace VersionOne.Example.ItemsOpenInProject
 		public const string ApiQuery = @"
 from: PrimaryWorkitem
 where:
-  Scope.Name: ""Sample: Release 1.0""
-  Scope.AssetState: Active
+	Scope.Name: ""Sample: Release 1.0""
+	Scope.AssetState: Active
 select:
-  - AssetType
-  - Name
-  - Estimate
-";
+	- AssetType
+	- Name
+	- Estimate
+			";
 
 		private static async Task DoRequest()
 		{
