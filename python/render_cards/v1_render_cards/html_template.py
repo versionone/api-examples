@@ -23,6 +23,7 @@ def head():
                 }
 
             div.descriptext {
+            	font-size: 9pt;
                 width: 100%;
                 height: 67%;
                 }
@@ -44,15 +45,15 @@ def head():
                 }
 
             tr.details td {
-                font-size: 12pt;
+                font-size: 10pt;
             }
 
             tr.owners td {
-                font-size: 18pt;
+                font-size: 12pt;
             }
 
             tr.title td {
-                font-size: 36pt;
+                font-size: 14pt;
             }
 
         </style>
