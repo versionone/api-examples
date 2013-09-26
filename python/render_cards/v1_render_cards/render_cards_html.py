@@ -2,17 +2,20 @@
 
 import html_template
 
+import v1pysdk
+
 def getCards():
-	for row in csv:
-		yield {
-			title: "",
-			description: "",
-			todo: "",
-			done: "",
-			priority: "",
-			owners: "",
-			qrdata: ""
-		}
+	with v1pysdk.V1Meta(...) as v1:
+		for row in v1.Task.where(...).select("Name", "Description", "Todo", "Done", "Owners.Name"):
+			yield {
+				title: row.Title,
+				description: row.Description,
+				todo: row.Todo,
+				done: row.Done,
+				priority: row.Priority,
+				owners: row.data["Owners.Name"],
+				qrdata: ""
+			}
 
 
 def items():
