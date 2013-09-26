@@ -11,7 +11,6 @@ def getCards():
                    .select("Name", "Description", "ToDo", "Estimate", "Owners.Name", "Status.Name")
                    )
         for row in tasks:
-            pprint.pprint(row)
             yield {
                 "title": row.Name,
                 "description": row.Description,
