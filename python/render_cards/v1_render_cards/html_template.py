@@ -62,7 +62,7 @@ def head():
 
 import urllib
 
-def card(title="", description="", todo="", done="", priority="", owners="", qrdata="", onleft=true, qrsize=100):
+def card(title="", description="", todo="", done="", priority="", owners="", qrdata="", onleft=True, qrsize=100):
     onleft = "onleft" if onleft else ""
     owners = ", ".join(owners)
     qrdata = urllib.urlencode(qrdata)

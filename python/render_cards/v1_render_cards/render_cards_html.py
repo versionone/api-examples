@@ -3,18 +3,23 @@
 import html_template
 
 import v1pysdk
-
+import pprint
 def getCards():
-    with v1pysdk.V1Meta(...) as v1:
-        for row in v1.Task.where(...).select("Name", "Description", "Todo", "Done", "Owners.Name"):
+    with v1pysdk.V1Meta(instance_url="https://www14.v1host.com/v1sdktesting", username="admin", password="admin") as v1:
+        tasks = (v1.Task
+                   .filter("Parent.Scope.Name='Sample: Release 1.0'")
+                   .select("Name", "Description", "ToDo", "Estimate", "Owners.Name", "Status.Name")
+                   )
+        for row in tasks:
+            pprint.pprint(row)
             yield {
-                title: row.Title,
-                description: row.Description,
-                todo: row.Todo,
-                done: row.Done,
-                priority: row.Priority,
-                owners: row.data["Owners.Name"],
-                qrdata: ""
+                "title": row.Name,
+                "description": row.Description,
+                "todo": row.ToDo,
+                "done": row.Estimate,
+                "priority": row.Status.Name,
+                "owners": [o.Name for o in row.Owners],
+                "qrdata": ""
             }
 
 
