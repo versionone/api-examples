@@ -35,7 +35,7 @@ def render():
 
 def main():
     html_out = render()
-    print html_out
+    open("cards.html","w").write(html_out)
 
 
 if __name__ == "__main__":
