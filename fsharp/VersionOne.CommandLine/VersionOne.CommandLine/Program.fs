@@ -35,7 +35,7 @@ let optionDef = {
                  "--creds",    fun v o -> {o with creds = v}
                  "--secrets",  fun v o -> {o with secrets = v} ]
   Other =                      fun v o -> {o with outputs = v::o.outputs}
-  Error =                      fun v o -> printfn "WARNING: Ignored argument: %s" v
+  Error =                      fun v o -> eprintfn "WARNING: Ignored argument: %s" v
                                           {o with errors = v::o.errors}
   }
 
