@@ -6,16 +6,16 @@ namespace ApiDemo
 	class Program
 	{
 		const string BASE_URL = "https://www14.v1host.com/v1sdktesting";
-		private const string SecretsFile = @"C:\Users\JKoberg\src\ApiDemo\client_secrets.json";
-		private const string CredsFile = @"C:\Users\JKoberg\src\ApiDemo\stored_credentials.json";
+        private const string SecretsFile = @"C:\Users\mheffel\Documents\GitHub\api-examples\csharp\ApiDemo\client_secrets.json";
+        private const string CredsFile = @"C:\Users\mheffel\Documents\GitHub\api-examples\csharp\ApiDemo\stored_credentials.json";
 
 		static void Main(string[] args)
 		{
 			var storage = new OAuth2Client.Storage.JsonFileStorage(SecretsFile, CredsFile);
-			
-			var dataConnector = new V1OAuth2APIConnector(BASE_URL + "/rest-1.oauth.v1/", storage);
-			var metaConnector = new V1OAuth2APIConnector(BASE_URL + "/meta.v1/", storage);
 
+            var dataConnector = new VersionOneAPIConnector(BASE_URL + "/rest-1.v1/").WithOAuth2(SecretsFile, CredsFile);
+            var metaConnector = new VersionOneAPIConnector(BASE_URL + "/meta.v1/");
+			
             var metaModel = new MetaModel(metaConnector);
             var services = new Services(metaModel, dataConnector);
 
@@ -32,8 +32,8 @@ namespace ApiDemo
             var andFilter = new AndFilterTerm(whereAdmin, whereNotTheAdmin);
             query.Filter = andFilter;
             query.Selection.AddRange(new[] { nameAttr, descAttr, worksItemsNameAttr });
-
             var result = services.Retrieve(query);
+
             foreach (var asset in result.Assets)
             {
                 Console.WriteLine("Name: " + asset.GetAttribute(nameAttr).Value);
