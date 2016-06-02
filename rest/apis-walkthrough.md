@@ -1,4 +1,4 @@
-# Getting Started with VersionOne Lifecycle REST APIs
+# Walkthrough of Using the VersionOne Lifecycle REST APIs
 
 ## What you need
 * Provide instructions for generating an Access Token in their own instance
