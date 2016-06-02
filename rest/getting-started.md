@@ -15,7 +15,7 @@
 * Shows output in both current XML, current JSON + PROPOSED BETTER JSON (A|B split test)
 * Shows screenshot again but with the changes mapped to the XML and JSON inputs we just sent to the API
 
-## #Example: Close a Story in VersionOne Lifecycle
+## Example: Close a Story in VersionOne Lifecycle
 * cURL example again
 * Shows how to close a story
 * Shows output in both current XML, current JSON + PROPOSED BETTER JSON (A|B split test)
