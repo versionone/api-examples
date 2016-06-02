@@ -1,9 +1,11 @@
 # Walkthrough of Using the VersionOne Lifecycle REST APIs
 
-## What you need
-* Provide instructions for generating an Access Token in their own instance
+## What you need to try this against our public test instance
 * Link to where to download cURL
 * Show screenshot of a Story in public Lifecycle instance
+
+## What you need to do to repeat this in your own instance
+* Provide instructions for generating an Access Token in their own instance
 
 ## Example: Query a Story from VersionOne Lifecycle
 * Use cURL example to query for Attributes, Single Value Relations, and Multi-Value Relations on the same Story in the screenshot
