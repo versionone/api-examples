@@ -30,3 +30,8 @@
 * Shows how to close a story
 * Shows output in both current XML, current JSON + PROPOSED BETTER JSON (A|B split test)
 * Shows screenshot with the changed status in the UI
+
+
+## TODOs
+
+* Create an instance and populate a sample story with mixture of all relevant scalars, relationships, and aggregate data.
