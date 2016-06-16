@@ -34,4 +34,5 @@
 
 ## TODOs
 
-* Create an instance and populate a sample story with mixture of all relevant scalars, relationships, and aggregate data.
+* DONE: Create an instance and populate a sample story with mixture of all relevant scalars, relationships, and aggregate data.
+  * URL: https://www16.v1host.com/api-examples/Account.mvc/LogIn?destination=%2Fapi-examples%2F
