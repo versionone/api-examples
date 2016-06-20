@@ -1,5 +1,16 @@
 # Walkthrough of Using the VersionOne Lifecycle REST APIs
 
+This hands-on walkthrough shows you how to perform three types of VersionOne Lifecycle REST API requests:
+ * Query a Project (Scope) for its Name, Description, and Oid Token
+ * Add a Backlog Item that belongs to this Scope (by referencing its Oid Token as "Scope" Relation)
+
+* Query -- retrieve the `Name`, `Description`, `Estimate`, `Status`, and `Owners` attributes from an existing **Backlog Item** (also called **Story**)
+* Update -- modify the Description an existing Backlog Item
+* Execute Operation -- trigger behavior on an existing Backlog Item to change its status within Lifecycle
+* 
+* suse the popular cURL HTTP client to query information about an existing Backlog Item (also called Story) from the VersionOne Lifecycle REST APIs
+
+
 ## NOTES
 
 * Should utilize Access Tokens
@@ -7,6 +18,7 @@
 * Should demonstrate a vertical slice of API functionality
 * Should be hands-on
 * Should minimize explanation -- let's wait to put it front of a few internal people and ask what questions they have that would make the narrative explanation most valuable
+
 
 ## What you need to try this against our public test instance
 * Link to where to download cURL
