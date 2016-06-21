@@ -45,9 +45,19 @@ Click the project named `VersionOne Lifecycle REST APIs 101` to open it in a dia
 
 ![Project dialog](https://cloud.githubusercontent.com/assets/1863005/16241937/0db32aaa-37be-11e6-833d-db14e9df21d4.png)
 
-Clicking that will open the Project in a fullscreen window or tab, like this:
+Clicking that will open the Project in a fullscreen window or tab, like below. **Copy the numeric porition in the value of the highlighted `oidToken` query string parameter value**. You will need this to query the **Scope** asset via the API in the next step. Note that **Scope** is the system term for what appears in the user interface as **Project**.
 
 ![Project fullscreen](https://cloud.githubusercontent.com/assets/1863005/16242154/137459cc-37bf-11e6-9774-a803562f9062.png)
+
+### Step 3: Execute query via cURL
+
+cURL command:
+
+```curl
+curl -i -X GET 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
+```
+
+Result:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
