@@ -1,9 +1,14 @@
 # Walkthrough of Using the VersionOne Lifecycle REST APIs
 
-This hands-on walkthrough shows you how to perform three types of VersionOne Lifecycle REST API requests:
- * Query a Project (Scope) for its `Name` and `Description`
- * Add a Backlog Item that belongs to this Scope (by referencing its Oid Token as "Scope" Relation)
+This hands-on walkthrough shows you the basics for how to perform three types of VersionOne Lifecycle REST API requests:
+* Querying existing assets 
+* Adding new assets
+* Updateng assets
+* Executing operations on assets
 
+## TODO: finish outlining the concrete steps at a high level
+* Query a Project (Scope) for its `Name` and `Description`
+  * Add a Backlog Item that belongs to this Scope (by referencing its Oid Token as "Scope" Relation)
 * Query -- retrieve the `Name`, `Description`, `Estimate`, `Status`, and `Owners` attributes from an existing **Backlog Item** (also called **Story**)
 * Update -- modify the Description an existing Backlog Item
 * Execute Operation -- trigger behavior on an existing Backlog Item to change its status within Lifecycle
@@ -21,10 +26,18 @@ This hands-on walkthrough shows you how to perform three types of VersionOne Lif
 
 
 ## What you need to try this against our public test instance
-* Link to where to download cURL
-* Show screenshot of a Story in public Lifecycle instance
+
+This walkthrough assumes you are on a system that can run the popular cURL command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
+
+Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. You should get back a result like this:
+
+![cURL Google](https://cloud.githubusercontent.com/assets/1863005/16272737/f3fd2c50-386c-11e6-864f-408abbe67a86.png)
+
+Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need 
 
 ## What you need to do to repeat this in your own instance
+
+If you'd like to adapt this tutorial to run against 
 * Provide instructions for generating an Access Token in their own instance
 
 ## Query a Project (Scope) by ID
