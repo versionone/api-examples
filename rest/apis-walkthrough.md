@@ -54,7 +54,7 @@ Clicking that will open the Project in a fullscreen window or tab, like below. *
 cURL command:
 
 ```curl
-curl -i -X GET 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
+curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
 ```
 
 Result:
