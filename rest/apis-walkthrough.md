@@ -27,7 +27,7 @@ This hands-on walkthrough shows you the basics for how to perform three types of
 
 ## What you need to try this against our public test instance
 
-This walkthrough assumes you are on a system that can run the popular cURL command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
+This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
 
 Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. You should get back a result like this:
 
