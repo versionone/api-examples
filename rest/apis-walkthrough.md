@@ -27,13 +27,23 @@ This hands-on walkthrough shows you the basics for how to perform three types of
 
 ## What you need to try this against our public test instance
 
+1. cURL
+2. This Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`
+
+### Details
 This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
 
 Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. You should get back a result like this:
 
 ![cURL Google](https://cloud.githubusercontent.com/assets/1863005/16272737/f3fd2c50-386c-11e6-864f-408abbe67a86.png)
 
-Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need 
+Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Using this with cURL is easy. Here is the format:
+
+`curl 'http://domain/path' -H "Authorization:Bearer <access token>"`
+
+For example, to get the details of the Admin user from our VersionOne Lifecycle examples instance, you'd run this:
+
+`curl 'http://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="`"`
 
 ## What you need to do to repeat this in your own instance
 
