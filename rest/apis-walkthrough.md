@@ -6,7 +6,7 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 * Updating assets
 * Executing operations on assets
 
-## Sections
+## Exercises
 
 * Query a Scope (known as **Project** to the UI) for its default API representation
 * Query a Scope for a subset of its attributes (`Name`, `Description`, `Members`, `CreateDate`)
