@@ -1,29 +1,19 @@
 # Walkthrough of Using the VersionOne Lifecycle REST APIs
 
-This hands-on walkthrough shows you the basics for how to perform three types of VersionOne Lifecycle REST API requests:
-* Querying existing assets 
+This hands-on walkthrough shows you the basics for how to perform four types of VersionOne Lifecycle REST API requests:
+* Querying existing assets
 * Adding new assets
-* Updateng assets
+* Updating assets
 * Executing operations on assets
 
-## TODO: finish outlining the concrete steps at a high level
-* Query a Project (Scope) for its `Name` and `Description`
-  * Add a Backlog Item that belongs to this Scope (by referencing its Oid Token as "Scope" Relation)
-* Query -- retrieve the `Name`, `Description`, `Estimate`, `Status`, and `Owners` attributes from an existing **Backlog Item** (also called **Story**)
-* Update -- modify the Description an existing Backlog Item
-* Execute Operation -- trigger behavior on an existing Backlog Item to change its status within Lifecycle
-* 
-* suse the popular cURL HTTP client to query information about an existing Backlog Item (also called Story) from the VersionOne Lifecycle REST APIs
+## Sections
 
-
-## NOTES
-
-* Should utilize Access Tokens
-* Should utilize common tools (cURL)
-* Should demonstrate a vertical slice of API functionality
-* Should be hands-on
-* Should minimize explanation -- let's wait to put it front of a few internal people and ask what questions they have that would make the narrative explanation most valuable
-
+* Query a Scope (known as **Project** to the UI) for its default API representation
+* Query a Scope for a subset of its attributes (`Name`, `Description`, `Members`, `CreateDate`)
+* Add a Story (also known as **Backlog Item** or **Requirement** to the UI) that belongs to this Scope (by referencing its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token))
+  * Query your new Story for a subset of its attributes (`Name`, `Description`, `Estimate`, `Status`, and `Owners`)
+* Update your new Story to modify its `Description`, `Status`, and `Owners` attributes
+* Execute the **Close** operation on your Story
 
 ## What you need to try this against our public test instance
 
@@ -148,3 +138,11 @@ Result:
 
 * DONE: Create an instance and populate a sample story with mixture of all relevant scalars, relationships, and aggregate data.
   * URL: https://www16.v1host.com/api-examples/Account.mvc/LogIn?destination=%2Fapi-examples%2F
+
+## NOTES
+
+* Should utilize Access Tokens
+* Should utilize common tools (cURL)
+* Should demonstrate a vertical slice of API functionality
+* Should be hands-on
+* Should minimize explanation -- let's wait to put it front of a few internal people and ask what questions they have that would make the narrative explanation most valuable
