@@ -125,10 +125,191 @@ You should get back a result that looks like this:
 </Asset>
 ```
 
-### Observations
+To see the result as JSON, run this cURL command:
 
-* 
+```curl
+curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384=" -H "Accept:application/json"
+```
 
+#### Expected result
+
+```json
+{
+  "_type": "Asset",
+  "href": "\/api-examples\/rest-1.v1\/Data\/Scope\/1005",
+  "id": "Scope:1005",
+  "Attributes": {
+    "AssetType": {
+      "_type": "Attribute",
+      "name": "AssetType",
+      "value": "Scope"
+    },
+    "Schedule": {
+      "_type": "Relation",
+      "name": "Schedule",
+      "value": null
+    },
+    "Parent": {
+      "_type": "Relation",
+      "name": "Parent",
+      "value": {
+        "_type": "Asset",
+        "href": "\/api-examples\/rest-1.v1\/Data\/Scope\/0",
+        "idref": "Scope:0"
+      }
+    },
+    "Owner": {
+      "_type": "Relation",
+      "name": "Owner",
+      "value": null
+    },
+    "AssetState": {
+      "_type": "Attribute",
+      "name": "AssetState",
+      "value": 64
+    },
+    "BeginDate": {
+      "_type": "Attribute",
+      "name": "BeginDate",
+      "value": "2016-06-19"
+    },
+    "Description": {
+      "_type": "Attribute",
+      "name": "Description",
+      "value": "Learn how to use the VersionOne Lifecycle REST APIs with hands-on exercises."
+    },
+    "Name": {
+      "_type": "Attribute",
+      "name": "Name",
+      "value": "VersionOne Lifecycle REST APIs 101"
+    },
+    "EndDate": {
+      "_type": "Attribute",
+      "name": "EndDate",
+      "value": null
+    },
+    "Status": {
+      "_type": "Relation",
+      "name": "Status",
+      "value": null
+    },
+    "TestSuite": {
+      "_type": "Relation",
+      "name": "TestSuite",
+      "value": null
+    },
+    "SecurityScope": {
+      "_type": "Relation",
+      "name": "SecurityScope",
+      "value": {
+        "_type": "Asset",
+        "href": "\/api-examples\/rest-1.v1\/Data\/Scope\/1005",
+        "idref": "Scope:1005"
+      }
+    },
+    "Scheme": {
+      "_type": "Relation",
+      "name": "Scheme",
+      "value": {
+        "_type": "Asset",
+        "href": "\/api-examples\/rest-1.v1\/Data\/Scheme\/1001",
+        "idref": "Scheme:1001"
+      }
+    },
+    "Reference": {
+      "_type": "Attribute",
+      "name": "Reference",
+      "value": null
+    },
+    "TargetEstimate": {
+      "_type": "Attribute",
+      "name": "TargetEstimate",
+      "value": null
+    },
+    "TargetSwag": {
+      "_type": "Attribute",
+      "name": "TargetSwag",
+      "value": null
+    },
+    "PlanningLevel": {
+      "_type": "Relation",
+      "name": "PlanningLevel",
+      "value": null
+    },
+    "Schedule.Name": {
+      "_type": "Attribute",
+      "name": "Schedule.Name",
+      "value": null
+    },
+    "Parent.Name": {
+      "_type": "Attribute",
+      "name": "Parent.Name",
+      "value": "System (All Projects)"
+    },
+    "Owner.Name": {
+      "_type": "Attribute",
+      "name": "Owner.Name",
+      "value": null
+    },
+    "Owner.Nickname": {
+      "_type": "Attribute",
+      "name": "Owner.Nickname",
+      "value": null
+    },
+    "Status.Name": {
+      "_type": "Attribute",
+      "name": "Status.Name",
+      "value": null
+    },
+    "TestSuite.Name": {
+      "_type": "Attribute",
+      "name": "TestSuite.Name",
+      "value": null
+    },
+    "SecurityScope.Name": {
+      "_type": "Attribute",
+      "name": "SecurityScope.Name",
+      "value": "VersionOne Lifecycle REST APIs 101"
+    },
+    "Scheme.Name": {
+      "_type": "Attribute",
+      "name": "Scheme.Name",
+      "value": "Default Scheme"
+    },
+    "PlanningLevel.Name": {
+      "_type": "Attribute",
+      "name": "PlanningLevel.Name",
+      "value": null
+    },
+    "BuildProjects": {
+      "_type": "Relation",
+      "name": "BuildProjects",
+      "value": [
+        
+      ]
+    },
+    "BuildProjects.Name": {
+      "_type": "Attribute",
+      "name": "BuildProjects.Name",
+      "value": [
+        
+      ]
+    },
+    "Ideas": {
+      "_type": "Attribute",
+      "name": "Ideas",
+      "value": [
+        
+      ]
+    }
+  }
+}
+```
+
+### Review
+At this point, you should know how to do the two tasks described in the beginning. Also note:
+* You can find the `oidToken` for almost all asset types in the same way you just did for Scope
+* The XML and JSON output you see above is the **default** representation of the asset, but there are many more parameters and options for customizing query results. Continue to _Exercise 2: Query a Scope for specific attributes_ to learn about the `sel` parameter.
 
 # NOTES:
 
