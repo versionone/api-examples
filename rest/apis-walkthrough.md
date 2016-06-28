@@ -8,19 +8,22 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 
 ## Exercises
 
-* Exercise 1: Query a Scope
+* Exercise 1: Query a Scope (Project)
 * Exercise 2: Query a Scope for specific attributes
-* Exercise 3: Create your own Story within a Scope
+* Exercise 3: Create your own Story (Backlog Item) within a Scope
 * Exercise 4: Query your Story
 * Exercise 5: Update your Story
 * Exercise 6: Close your Story!
 
-## What you need to try this against our public test instance
+## How to try this against our public test instance
 
-1. cURL
+You'll need just two things:
+
+1. [cURL](https://curl.haxx.se/download.html)
 2. This Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`
 
 ### Setup
+
 This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
 
 Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. You should get back a result like this:
@@ -37,15 +40,18 @@ For example, to get the details of the Admin user from our VersionOne Lifecycle 
 curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
 ```
 
-## What you need to do to repeat this in your own instance
+## How to repeat this against your own VersionOne Lifecycle instance
 
 If you'd like to adapt this tutorial to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
 
-## Exercise 1: Query a Scope (Project) by its OID Token for its default API representation
+## Exercise 1: Query a Scope (Project) 
 
-> for its default representation (known as **Project** to the UI) by its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token) for its default API representation
+The simplest thing you can do with VersionOne Lifecycle REST APIs is to query for information about the Scopes (known as **Projects** to the UI) and other Workitems in an instance. While this exercise may seem basic, it provides a solid foundation for you to learn  more sophisticated and powerful query parameters and options.
 
-The simplest thing you can do with the VersionOne Lifecycle REST APIs is to query for information about the Scopes and other Workitems in your instance. 
+### What you'll learn
+
+* How to find the [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token) of a Scope within the VersionOne Lifecycle UI
+* How to use the numeric porition of an OID Token to get the default API representation of a Scope using cURL
 
 ### Step 1: View the Projects page in Lifecycle
 
@@ -67,13 +73,15 @@ Clicking that will open the Project in a fullscreen window or tab, like below. *
 
 ### Step 3: Execute query via cURL
 
-cURL command:
+Run this cURL command:
 
 ```curl
 curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
 ```
 
-Result:
+#### Expected result
+
+You should get back a result that looks like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -116,6 +124,11 @@ Result:
   <Attribute name="Ideas" />
 </Asset>
 ```
+
+### Observations
+
+* 
+
 
 # NOTES:
 
