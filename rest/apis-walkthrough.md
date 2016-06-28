@@ -2,18 +2,18 @@
 
 This hands-on walkthrough shows you the basics for how to perform four types of VersionOne Lifecycle REST API requests:
 * Querying existing assets
-* Adding new assets
+* Creating new assets
 * Updating assets
 * Executing operations on assets
 
 ## Exercises
 
-* Exercise 1: Query a Scope (known as **Project** to the UI) by its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token) for its default API representation
-* Exercise 2: Query a Scope for a subset of its attributes (`Name`, `Description`, `Members`, `CreateDate`)
-* Exercise 3: Add a Story (also known as **Backlog Item** or **Requirement** to the UI) that belongs to this Scope (by referencing its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token))
-* Exercise 4: Query your new Story for a subset of its attributes (`Name`, `Description`, `Estimate`, `Status`, and `Owners`)
-* Exercise 5: Update your new Story to modify its `Description`, `Status`, and `Owners` attributes
-* Exercise 6: Execute the **Close** operation on your Story
+* Exercise 1: Query a Scope
+* Exercise 2: Query a Scope for specific attributes
+* Exercise 3: Create your own Story within a Scope
+* Exercise 4: Query your Story
+* Exercise 5: Update your Story
+* Exercise 6: Close your Story!
 
 ## What you need to try this against our public test instance
 
@@ -42,6 +42,8 @@ curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H "Author
 If you'd like to adapt this tutorial to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
 
 ## Exercise 1: Query a Scope (Project) by its OID Token for its default API representation
+
+> for its default representation (known as **Project** to the UI) by its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token) for its default API representation
 
 The simplest thing you can do with the VersionOne Lifecycle REST APIs is to query for information about the Scopes and other Workitems in your instance. 
 
@@ -114,6 +116,15 @@ Result:
   <Attribute name="Ideas" />
 </Asset>
 ```
+
+# NOTES:
+
+* a subset of its attributes (`Name`, `Description`, `Members`, `CreateDate`)
+* Exercise 3: Create a Story (also known as **Backlog Item** or **Requirement** to the UI) that belongs to this Scope (by referencing its [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token))
+* Exercise 4: Query your new Story for a subset of its attributes (`Name`, `Description`, `Estimate`, `Status`, and `Owners`)
+* Exercise 5: Update your new Story to modify its `Description`, `Status`, and `Owners` attributes
+* Exercise 6: Execute the **Close** operation on your Story
+
 
 
 ## Example: Query a Story from VersionOne Lifecycle
