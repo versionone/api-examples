@@ -32,11 +32,13 @@ Once you have cURL installed, you can try it against a test URL, like Google, by
 
 Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Using this with cURL is easy. Here is the format:
 
-`curl 'http://domain/path' -H "Authorization:Bearer <access token>"`
+```shell
+curl 'http://domain/path' -H "Authorization:Bearer <access token>"
+```
 
 For example, to get the details of the Admin user from our VersionOne Lifecycle examples instance, you'd run this:
 
-```
+```shell
 curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
 ```
 
