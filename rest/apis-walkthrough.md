@@ -68,13 +68,11 @@ Assuming you are following along with our public examples instance, then the ins
 
 `https://www16.v1host.com/api-examples`
 
-This URL breaks down into three parts: `protocol://host/instance`
+This URL breaks down into three parts: `protocol://host/instance` (`https`, `www16.v1host.com`, and `api-examples`)
 
-Given this starting point, the REST Data API endpoint is simple to construct:
+Given this starting point, the REST Data API endpoint is simple to construct by adding `/rest-1.v1/Data` to the end. Do this to the examples instance URL produces this:
 
-Simply add `/rest-1.v1/Data` to the end. In this case, producing:
-
-<code>https://www16.v1host.com/api-examples/<b>rest-1.v1/Data</b></code>
+`https://www16.v1host.com/api-examples/rest-1.v1/Data`
 
 ### Using your own instance
 
@@ -82,7 +80,7 @@ If, however, you are using your own VersionOne Lifecycle instance, then you may 
 
 If, for example, your instance URL is `https://www7.v1host.com/acme`, then the REST Data API endpoint for that instance will be:
 
-<code>https://www7.v1host.com/acme/<b>rest-1.v1/Data</b></code>
+`https://www7.v1host.com/acme/rest-1.v1/Data`
 
 ### Constructing the Data API URL for an asset
 
@@ -94,12 +92,11 @@ While you are used to viewing assets within the UI, you may not know that all as
 
 The URL for the default API representation of an asset always follows the following simple form:
 
-<code>https://www16.v1host.com/api-examples/rest-1.v1/Data/<b>&lt;asset type&gt;</b>/<b>&lt;asset id&gt;</b></code>
+`https://www16.v1host.com/api-examples/rest-1.v1/Data/<asset type>/<asset id>`
 
 Thus, to construct the address for the `Member:20` asset, you start by breaking it apart on the `:`, producing an asset type of `Member`, and an asset id of `20`. Then, you just plug them into the form above, producing:
 
-<code>https://www16.v1host.com/api-examples/rest-1.v1/Data/<b>Member</b>/<b>20</b></code>
-
+`https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20`
 
 ## Exercise 1: Query a Scope (Project) 
 
