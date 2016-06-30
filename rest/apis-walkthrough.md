@@ -62,7 +62,7 @@ OK, let's go!
 
 ## Exercise 1: Understand the REST Data API fundamentals
 
-Before you get started, let's take a moment to understand some fundamentals about VersionOne Lifecycle's REST Data API.
+This exercise teaches you the fundamental concepts about the REST Data API.
 
 ### What you'll learn
 
