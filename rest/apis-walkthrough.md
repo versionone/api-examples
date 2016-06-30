@@ -56,7 +56,9 @@ Don't worry if you don't understand much about the URLs or the results you've se
 
 ## How to try this against your own VersionOne Lifecycle instance
 
-If you'd like to adapt this walkthrough to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
+Before moving to the exercises, note that if you want to adapt them to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
+
+OK, let's go!
 
 ## Exercise 1: Understand the REST Data API fundamentals
 
