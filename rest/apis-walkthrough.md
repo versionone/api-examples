@@ -11,7 +11,7 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 You'll step through seven brief exercises to complete this walkthrough. Each one builds upon knowledge gained in the previous one.
 
 * Exercise 1: Understand the REST Data API fundamentals
-* Exercise 2: Query a Scope (Project)
+* Exercise 2: Find a Scope (Project) OID Token in VersionOne LifeCycle's UI
 * Exercise 3: Query a Scope for specific attributes
 * Exercise 4: Create your own Story (Backlog Item) within a Scope
 * Exercise 5: Query your Story
@@ -108,9 +108,15 @@ Thus, to construct the address for the `Member:20` asset, you start by breaking 
 
 TODO
 
-## Exercise 2: Query a Scope (Project) 
+## Exercise 2: Find a Scope (Project) OID Token in VersionOne LifeCycle's UI
 
-The simplest thing you can do with VersionOne Lifecycle REST APIs is to query for information about the Scopes (known as **Projects** to the UI) and other Workitems in an instance. While this exercise may seem basic, it provides a solid foundation for you to learn  more sophisticated and powerful query parameters and options.
+Now that you understand what an OID Token is and how to construct a Data API URL for an asset with it, you can start using the API!
+
+But, how do you _actually find_ an OID Token from within VersionOne LifeCycle's UI?
+
+This exercise shows you how to do exactly that for a Scope asset (known as **Project** to the UI) and to query the REST Data API for it.
+
+While this exercise may seem basic, it provides a solid foundation for you to learn  more sophisticated and powerful query parameters and options.
 
 ### What you'll learn
 
