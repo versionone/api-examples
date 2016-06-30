@@ -138,10 +138,12 @@ Click the project named `VersionOne Lifecycle REST APIs 101` to open it in a dia
 ![Project dialog](https://cloud.githubusercontent.com/assets/1863005/16241937/0db32aaa-37be-11e6-833d-db14e9df21d4.png)
 
 Clicking that will open the Project in a fullscreen window or tab, like below. Now:
-* **Copy the value of the highlighted `oidToken` query string parameter value to your clipboard, but note this:** You may see **oidToken=Scope%3A1005** instead of **oidToken=Scope:1005**. This is because of URL encoding. Just know that **%3A** is the encoded value for the **:** character.
-* Paste this value into a text editor and:
+* Copy the text after the **=** sign in the highlighted `oidToken` query string parameter to your clipboard, **but note this:** You may see **oidToken=Scope%3A1005** instead of **oidToken=Scope:1005**. This is because of URL encoding. Just know that **%3A** is the encoded value for the **:** character.
+* Paste this value (should be **Scope:1005** or **Scope%3A1005) into a text editor and then:
   * Replace the **:** (or **%3A** characters) with a single **/** character, producing **Scope/1005**
   * Finally, prefix the whole thing with another single **/** character, producing **/Scope/1005**
+
+Still with us? Keep your **/Scope/1005** text handy, and head to Step 3!
 
 ![Project fullscreen](https://cloud.githubusercontent.com/assets/1863005/16242154/137459cc-37bf-11e6-9774-a803562f9062.png)
 
