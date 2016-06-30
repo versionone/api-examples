@@ -66,7 +66,7 @@ Before you get started, let's take a moment to understand some fundamentals abou
 
 Assuming you are following along with our public examples instance, then the instance URL is:
 
-```https://www16.v1host.com/api-examples```
+`https://www16.v1host.com/api-examples`
 
 This URL breaks down into three parts: `protocol://host/instance`
 
@@ -74,9 +74,7 @@ Given this starting point, the REST Data API endpoint is simple to construct:
 
 Simply add `/rest-1.v1/Data` to the end. In this case, producing:
 
-```
-https://www16.v1host.com/api-examples/rest-1.v1/Data
-```
+<code>https://www16.v1host.com/api-examples/<b>rest-1.v1/Data</b></code>
 
 ### Using your own instance
 
@@ -84,9 +82,7 @@ If, however, you are using your own VersionOne Lifecycle instance, then you may 
 
 If, for example, your instance URL is `https://www7.v1host.com/acme`, then the REST Data API endpoint for that instance will be:
 
-```
-https://www7.v1host.com/acme/rest-1.v1/Data
-```
+<code>https://www7.v1host.com/acme/<b>rest-1.v1/Data</b></code>
 
 ### Constructing the Data API URL for an asset
 
