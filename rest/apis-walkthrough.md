@@ -1,4 +1,4 @@
-# Walkthrough of Using the VersionOne Lifecycle REST APIs
+# Walkthrough of Using the VersionOne Lifecycle REST Data API
 
 This hands-on walkthrough shows you the basics for how to perform four types of VersionOne Lifecycle REST Data API requests:
 * Querying existing assets
