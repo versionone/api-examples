@@ -1,6 +1,6 @@
 # Walkthrough of Using the VersionOne Lifecycle REST APIs
 
-This hands-on walkthrough shows you the basics for how to perform four types of VersionOne Lifecycle REST API requests:
+This hands-on walkthrough shows you the basics for how to perform four types of VersionOne Lifecycle REST Data API requests:
 * Querying existing assets
 * Creating new assets
 * Updating assets
@@ -8,43 +8,104 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 
 ## Exercises
 
-* Exercise 1: Query a Scope (Project)
-* Exercise 2: Query a Scope for specific attributes
-* Exercise 3: Create your own Story (Backlog Item) within a Scope
-* Exercise 4: Query your Story
-* Exercise 5: Update your Story
-* Exercise 6: Close your Story!
+You'll step through seven brief exercises to complete this walkthrough. Each one builds upon knowledge gained in the previous one.
+
+* Exercise 1: Understand the `rest-1.v1/Data` API endpoint fundamentals
+* Exercise 2: Query a Scope (Project)
+* Exercise 3: Query a Scope for specific attributes
+* Exercise 4: Create your own Story (Backlog Item) within a Scope
+* Exercise 5: Query your Story
+* Exercise 6: Update your Story
+* Exercise 7: Close your Story!
 
 ## How to try this against our public test instance
 
 You'll need just two things:
 
-1. [cURL](https://curl.haxx.se/download.html)
-2. This Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`
+1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client
+2. This VersionOne Lifecycle Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- a credential string necessary to authenticate with the API
 
 ### Setup
 
 This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
 
-Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. You should get back a result like this:
+Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. 
+
+You should then see a result like this:
 
 ![cURL Google](https://cloud.githubusercontent.com/assets/1863005/16272737/f3fd2c50-386c-11e6-864f-408abbe67a86.png)
 
-Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Using this with cURL is easy. Here is the format:
+Unlike the Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
 
 ```shell
 curl 'http://domain/path' -H "Authorization:Bearer <access token>"
-```
+```m
 
-For example, to get the details of the Admin user from our VersionOne Lifecycle examples instance, you'd run this:
+For example, to get the details of the Admin Member from our VersionOne Lifecycle examples instance, run this cURL command:
 
 ```shell
-curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
+curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384='
+```
+You should then see a result like this:
+
+![cURL VersionOne Lifecycle Admin Member](https://cloud.githubusercontent.com/assets/1863005/16494319/e8b463cc-3eb6-11e6-9993-22afc846b8ad.png)
+
+#### Review
+
+Don't worry if you don't understand much about the URLs or the results you've seen yet. You'll learn all about 
+
+## How to try this against your own VersionOne Lifecycle instance
+
+If you'd like to adapt this walkthrough to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
+
+## Exercise 1: Understand the `rest-1.v1/Data` API endpoint fundamentals
+
+Before you get started, let's take a moment to understand some fundamentals about VersionOne Lifecycle's REST Data API.
+
+### Using our examples instance
+
+Assuming you are following along with our public examples instance, then the instance URL is:
+
+```
+https://www16.v1host.com/api-examples
 ```
 
-## How to repeat this against your own VersionOne Lifecycle instance
+This URL breaks down into three parts: `protocol://host/instance`
 
-If you'd like to adapt this tutorial to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
+Given this starting point, the REST Data API endpoint is simple to construct:
+
+Simply add `/rest-1.v1/Data` to the end. In this case, producing:
+
+```
+https://www16.v1host.com/api-examples/rest-1.v1/Data
+```
+
+### Using your own instance
+
+If, however, you are using your own VersionOne Lifecycle instance, then you may have a different host and will definitely have a different instance name.
+
+If, for example, your instance URL is `https://www7.v1host.com/acme`, then the REST Data API endpoint for that instance will be:
+
+```
+https://www7.v1host.com/acme/rest-1.v1/Data
+```
+
+### Constructing the Data API URL for an asset
+
+As you probably already know from using VersionOne Lifecycle, the business objects within the system are called [assets](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset). All assets in a particular instance are identified by the combination of their [asset type](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset_Type) and a unique integer collectively called an [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token). 
+
+For example, `Member:20` is an OID Token that uniquely identifies the a Member within an instance. It just so happens that this particular combination **always** identifies the Admin user within an instance because of the way the database gets initialized.
+
+While you are used to viewing assets within the UI, you may not know that all assets **automatically** have their own REST Data API URLs as well.
+
+The URL for the default API representation of an asset always follows the following simple form:
+
+<code>https://www16.v1host.com/api-examples/rest-1.v1/Data/<b>&lt;asset type&gt;</b>/<b>&lt;asset id&gt;</b></code>
+
+Thus, to construct the address for the `Member:20` asset, you start by breaking it apart on the `:`, producing an asset type of `Member`, and an asset id of `20`. Then, you just plug them into the form above, producing:
+
+<code>https://www16.v1host.com/api-examples/rest-1.v1/Data/<b>Member</b>/<b>20</b></code>
+
 
 ## Exercise 1: Query a Scope (Project) 
 
