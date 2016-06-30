@@ -50,9 +50,9 @@ You should then see a result like this:
 
 ![cURL VersionOne Lifecycle Admin Member](https://cloud.githubusercontent.com/assets/1863005/16494319/e8b463cc-3eb6-11e6-9993-22afc846b8ad.png)
 
-#### Review
+### Review
 
-Don't worry if you don't understand much about the URLs or the results you've seen yet. You'll learn all about 
+Don't worry if you don't understand much about the URLs or the results you've seen yet. You'll learn all about that starting in _Exercise 1: Understand the REST Data API fundamentals_.
 
 ## How to try this against your own VersionOne Lifecycle instance
 
@@ -62,7 +62,13 @@ If you'd like to adapt this walkthrough to run against your own instance of Vers
 
 Before you get started, let's take a moment to understand some fundamentals about VersionOne Lifecycle's REST Data API.
 
-### Using our examples instance
+### What you'll learn
+
+* How to construct the base Data API URL for any VersionOne Lifecycle instance
+* How to deconstruct an asset's OID Token and use it to contruct the exact Data API URL for that asset
+* Understand the two supported output formats for Data API responses
+
+### Step 1: Construct the base Data API URL for our examples instance
 
 Assuming you are following along with our public examples instance, then the instance URL is:
 
@@ -74,7 +80,7 @@ Given this starting point, the REST Data API endpoint is simple to construct by 
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data`
 
-### Using your own instance
+### Step 2: Construct the base Data API URL for your own instance
 
 If, however, you are using your own VersionOne Lifecycle instance, then you may have a different host and will definitely have a different instance name.
 
@@ -82,7 +88,7 @@ If, for example, your instance URL is `https://www7.v1host.com/acme`, then the R
 
 `https://www7.v1host.com/acme/rest-1.v1/Data`
 
-### Constructing the Data API URL for an asset
+### Step 3: Construct the Data API URL for an asset
 
 As you probably already know from using VersionOne Lifecycle, the business objects within the system are called [assets](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset). All assets in a particular instance are identified by the combination of their [asset type](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset_Type) and a unique integer collectively called an [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token). 
 
@@ -98,7 +104,11 @@ Thus, to construct the address for the `Member:20` asset, you start by breaking 
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20`
 
-## Exercise 1: Query a Scope (Project) 
+### Step 4: Understand the XML and JSON Data API response formats
+
+TODO
+
+## Exercise 2: Query a Scope (Project) 
 
 The simplest thing you can do with VersionOne Lifecycle REST APIs is to query for information about the Scopes (known as **Projects** to the UI) and other Workitems in an instance. While this exercise may seem basic, it provides a solid foundation for you to learn  more sophisticated and powerful query parameters and options.
 
