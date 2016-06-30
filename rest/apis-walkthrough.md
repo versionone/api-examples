@@ -137,13 +137,25 @@ Click the project named `VersionOne Lifecycle REST APIs 101` to open it in a dia
 
 ![Project dialog](https://cloud.githubusercontent.com/assets/1863005/16241937/0db32aaa-37be-11e6-833d-db14e9df21d4.png)
 
-Clicking that will open the Project in a fullscreen window or tab, like below. **Copy the numeric porition in the value of the highlighted `oidToken` query string parameter value**. You will need this to query the **Scope** asset via the API in the next step. Note that **Scope** is the system term for what appears in the user interface as **Project**.
+Clicking that will open the Project in a fullscreen window or tab, like below. Now:
+
+***Copy the value of the highlighted `oidToken` query string parameter value to your clipboard.** 
+> **Important note:** You may see **oidToken=Scope%3A1005** instead of **oidToken=Scope:1005**. This is because of URL encoding. Just know that **%3A** is the encoded value for the **:** character.
+* Paste this value into a text editor and then replace the **:** (or **%3A** characters) with a single **/** character, to produce **Scope/1005**
 
 ![Project fullscreen](https://cloud.githubusercontent.com/assets/1863005/16242154/137459cc-37bf-11e6-9774-a803562f9062.png)
 
 ### Step 3: Execute query via cURL
 
-Run this cURL command:
+Now, recall from Exercise 1 that the form for constructing the URL for an asset's Data API URL is as follows:
+
+`https://www16.v1host.com/api-examples/rest-1.v1/Data/<asset type>/<asset id>`
+
+Combining the base Data API URL, `https://www16.v1host.com/api-examples/rest-1.v1/Data/` with what's in your clipboard, **Scope/1005** produces the following URL:
+
+`https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005`
+
+Now that you have the asset's Data API URL, you can fetch it with cURL using this command:
 
 ```curl
 curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
