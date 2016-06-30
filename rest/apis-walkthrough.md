@@ -92,7 +92,7 @@ If, for example, your instance URL is `https://www7.v1host.com/acme`, then the R
 
 As you probably already know from using VersionOne Lifecycle, the business objects within the system are called [assets](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset). All assets in a particular instance are identified by the combination of their [asset type](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset_Type) and a unique integer collectively called an [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token). 
 
-For example, `Member:20` is an OID Token that uniquely identifies the a Member within an instance. It just so happens that this particular combination **always** identifies the Admin user within an instance because of the way the database gets initialized.
+For example, `Member:20` is an OID Token that uniquely identifies a Member asset within an instance. It just so happens that this particular combination **always** identifies the Admin user within an instance because of the way the database gets initialized.
 
 While you are used to viewing assets within the UI, you may not know that all assets **automatically** have their own REST Data API URLs as well.
 
