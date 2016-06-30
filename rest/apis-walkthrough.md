@@ -10,7 +10,7 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 
 You'll step through seven brief exercises to complete this walkthrough. Each one builds upon knowledge gained in the previous one.
 
-* Exercise 1: Understand the `rest-1.v1/Data` API endpoint fundamentals
+* Exercise 1: Understand the REST Data API fundamentals
 * Exercise 2: Query a Scope (Project)
 * Exercise 3: Query a Scope for specific attributes
 * Exercise 4: Create your own Story (Backlog Item) within a Scope
@@ -58,7 +58,7 @@ Don't worry if you don't understand much about the URLs or the results you've se
 
 If you'd like to adapt this walkthrough to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
 
-## Exercise 1: Understand the `rest-1.v1/Data` API endpoint fundamentals
+## Exercise 1: Understand the REST Data API fundamentals
 
 Before you get started, let's take a moment to understand some fundamentals about VersionOne Lifecycle's REST Data API.
 
@@ -66,9 +66,7 @@ Before you get started, let's take a moment to understand some fundamentals abou
 
 Assuming you are following along with our public examples instance, then the instance URL is:
 
-```
-https://www16.v1host.com/api-examples
-```
+```https://www16.v1host.com/api-examples```
 
 This URL breaks down into three parts: `protocol://host/instance`
 
