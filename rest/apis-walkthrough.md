@@ -76,7 +76,7 @@ Assuming you are following along with our public examples instance, then the ins
 
 This URL breaks down into three parts: `protocol://host/instance` (`https`, `www16.v1host.com`, and `api-examples`)
 
-Given this starting point, the REST Data API endpoint is simple to construct by adding `/rest-1.v1/Data` to the end. Do this to the examples instance URL produces this:
+Given this starting point, the REST Data API endpoint is simple to construct by adding `/rest-1.v1/Data` to the end. Doing this to the examples instance URL produces this:
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data`
 
