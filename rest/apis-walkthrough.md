@@ -23,7 +23,7 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 You'll need just two things:
 
 1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client
-2. This VersionOne Lifecycle Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- a credential string necessary to authenticate with the API
+2. This VersionOne Lifecycle Access Token in your clipboard: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- a credential to authenticate with the REST Data API
 
 ### Setup
 
