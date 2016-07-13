@@ -240,17 +240,32 @@ new {
 
 Now, the above, while nice for typing code, might not work well for programmatic scenarios. To better support that, we could have a light-weight Asset class that aids this, but still does not require meta. Example:
 
+Suppose you are writing an intergration or an import tool, and you need to loop over a list of items to produce a list of stories to add to a brand new Scope in VersionOne. Obviously, the code in the previous sample is not usable unless you want to GENERATE code.
+
 TODO
 
 ```csharp
-dynamic scope = new Asset("Scope");
-scope.Name = "New Scope with Workitems";
-scope.Owner = "Member:20";
+var mySystemProject = db.GetTheProjectFromMySystem("id");
 
-dynamic story = new Asset("Story");
+dynamic scope = Asset("Scope"); // Create an empty Asset for type Scope
+scope.Name = mySystemProject.ProjectName; // Assume that's the property in this other system's API...
+scope.Owner = "Member:20";
+scope.Workitems = Assets(); // This would create an empty list of Assets, ready for you to populate
+
+foreach(var backlogItem in mySystemProject.BacklogItems) { // Assume mySystemProject has a collection called BacklogItems
+    dynamic story = Asset("Story");
+    story.Name = backlogItem.BacklogItemName; // This is a stupid property name, but that's why the customer is MIGRATING to V1
+    story.Description = backlogItem.Desc; // More stupid namery
+    story.Children = Assets(); // Again, create an empty list of Assets
+    foreach(var task in backlogItem.Tasks) { // Hey they named something well...
+      story.Children.Add(Asset("Task", new { Name = task.Name }));
+    }
+    foreach(var test in backlogItem.Tests) { // They are getting better at this naming convention thing!
+      story.Children.Add(Asset("Test", new { Name = test.Name }));
+    }
+    
+    scope.Workitems.Add(story); // Add it!
+}
 ```
 
-
-
-
-
+The above example would facilitate the programmatic way with ease and the least amout of leaky abstractions. This model can produce the needed YAML payload, and the API endpoint can attempt to resolve all the asset names, attributes, and relationships properly and return errors when it cannot.
