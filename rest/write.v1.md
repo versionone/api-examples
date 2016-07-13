@@ -207,7 +207,7 @@ Below is in C#, it would look the cleanest, because of anonymous types, but in J
 client.Create("Scope",
 new {
  Name = "New Scope with Workitems",
- Owner = Relation("Member:20"),
+ Owner = "Member:20",
  Workitems = Assets(
     Asset("Story", new {
         Name = "Story under new Scope",
@@ -238,6 +238,17 @@ new {
 });
 ```
 
+Now, the above, while nice for typing code, might not work well for programmatic scenarios. To better support that, we could have a light-weight Asset class that aids this, but still does not require meta. Example:
+
+TODO
+
+```csharp
+dynamic scope = new Asset("Scope");
+scope.Name = "New Scope with Workitems";
+scope.Owner = "Member:20";
+
+dynamic story = new Asset("Story");
+```
 
 
 
