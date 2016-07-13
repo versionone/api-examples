@@ -404,4 +404,4 @@ At this point, you should know how to do the two tasks described in the beginnin
 
 TODO 
 
-See [exercises.md] for work-in-progress
+See [exercises.md](exercises.md) for work-in-progress
