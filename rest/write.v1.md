@@ -4,9 +4,9 @@ The [query.v1](https://community.versionone.com/Developers/Developer-Library/Sam
 
 There are a number of things we can do to improve this, all while retaining the power and flexibility of the `query.v1` endpoint.
 
-# Add a fluent interface for building YAML queries
+# Idea 1: Add a fluent interface for building YAML queries
 
-Here's an example from a real support ticket:
+This document is primarily about `writing`, not querying, but first a quick detour. Here's an example from a real support ticket:
 
 ## Customer code:
 
@@ -93,6 +93,150 @@ where:
   Timebox.Name: Iteration 1
 ```
 
+# Idea 2: Extend capabilities of the YAML syntax to support writing
+
+Leaving aside the question of whether we introduce a new `write.v1` or just enhance the existing `query.v1` endpoint, here are some ideas:
+
+## Support POSTing new Assets and updates
+
+### Create new
+
+```yaml
+asset: Story
+attributes:
+ Name: My name
+ Description: My description
+ Owners: Member:20
+```
+
+### Update existing
+
+```yaml
+asset: Story:12235
+attributes:
+ Name: My updated name
+ Description: My updated description
+ Owners:
+  replace: # replaces Member:20 with Member:50
+   - Member:20
+   - Member:50
+```
+Alternatively
+
+```yaml
+asset: Story:1234
+attributes:
+ Name: My updated name
+ Description: My updated description
+ Owners:
+  remove:
+  - Member:20
+  add:
+  - Member:50
+```
+
+## Support POSTing batching of new Assets and updates in a single payload
+
+Because YAML makes it easy to separate multiple documents, we can easily support batch requests:
+
+```yaml
+asset: Scope
+attributes:
+ Name: New Scope
+ Owner: Member:20
+---
+asset: Story
+attributes:
+ Name: My new Story
+ Description: My description
+ Scope: Scope:12345
+---
+asset: Story
+attributes:
+ Name: My second new Story
+ Description: My second description
+ Scope: Scope:12345
+```
+
+Now, you may ask yourself, "What if I want the two new stories to be workitems WITHIN the new Scope instead of having to manually specify `Scope:12345`, something that already exists?
+
+### Creating a new Scope with new Workitems, each of which itself has new Children
+
+Good question, here's a proposed syntax:
+
+```
+asset: Scope
+attributes:
+ Name: New Scope with Workitems
+ Owner: Member:20
+ Workitems:
+ - asset:Story
+   attributes:
+    Name: New Story under new scope
+    Description: New desc
+    Children:
+    - asset: Task
+      attributes:
+       Name: Task 1
+    - asset: Test
+      attributes:
+       Name: Test 1
+ - asset:Story 
+   attributes:
+    Name: Second story
+    Description: A desc
+    Children:
+    - asset: Task
+      attributes:
+       Name: Another task
+    - asset: Test
+      attributes:
+       Name: Another test
+```
+
+In this case, we would parse the top-level document and create it with its scalar attributes, and then look at the attributes that match what normally are read-only relationships and then attempt to create new Asset items based on their definitions, creating them in the correct way with the appropriate `Scope` reference when we make them. Obviously, it might take some mapping and creative distpatch tabling in the endpoint to know which Attributes are actuall Relationships and so forth.
+
+#### Doing the above in C#
+
+What might creating this tree of Assets look like via C# or Java to avoid forcing people to build up strings when that's not convenient? (Think OpsHub, Tasktop, other big partners that are mapping and syncing, not just ad-hoc querying). Here's an idea:
+
+Below is in C#, it would look the cleanest, because of anonymous types, but in Java we could use hash maps and other convience classes or a lightweight, generic `Asset` type:
+
+``c#
+
+client.Create("Scope",
+new {
+ Name = "New Scope with Workitems",
+ Owner = Relation("Member:20"),
+ Workitems = Assets(
+    Asset("Story", new {
+        Name = "Story under new Scope",
+        Description = "New desc",
+        Children = Assets(
+            Asset("Task", new {
+                Name = "Task 1"
+            }),
+            Asset("Test", new {
+                Name = "Test 1"
+            })
+        )
+    }),
+    Asset("Story", new {
+        Name = "Second story",
+        Description = "A desc",
+        Children = Assets(
+            Asset("Task", new {
+                Name = "Task 1"
+            }),
+            Asset("Test", new {
+                Name = "Test 1"
+            })
+        )
+     )  
+    }
+ )
+});
+```
 
 
 
