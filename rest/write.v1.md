@@ -135,6 +135,34 @@ attributes:
   - Member:50
 ```
 
+## Support POSTing a query + transform operation over the results
+
+Suppose you want to query all stories currently owned by `Member:57` and replace the owner with `Member:99`, like after someone leaves the company. Here's a proposed syntax:
+
+```
+from: Story
+filter:
+- Owners=Member:57
+apply:
+ attributes:
+  Owners:
+   replace:
+   - Member:57
+   - Member:99
+```
+
+What if you wanted to clear out the `Owners` attribute of all stories in iteration and set the status to Future
+
+```
+from: Story
+where:
+ Timebox.Name="Iteration 1"
+apply:
+ attributes:
+  Owners: clear
+  Status: StoryStatus:133 # Even better if we can add in support for Status: Future
+```
+
 ## Support POSTing batching of new Assets and updates in a single payload
 
 Because YAML makes it easy to separate multiple documents, we can easily support batch requests:
