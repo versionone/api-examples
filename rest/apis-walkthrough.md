@@ -67,7 +67,7 @@ This exercise teaches you the fundamental concepts about the REST Data API.
 ### What you'll learn
 
 * How to construct the base Data API URL for any VersionOne Lifecycle instance
-* How to deconstruct an asset's OID Token and use it to contruct the exact Data API URL for that asset
+* How to deconstruct an asset's OID Token and use it to construct the exact Data API URL for that asset
 * Understand the two supported output formats for Data API responses
 
 ### Step 1: Construct the base Data API URL for our examples instance
