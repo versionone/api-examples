@@ -25,7 +25,7 @@ You'll need just two things:
 1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client which allows you to query and updatge data in REST APIs very easily. If you don't want to or do not have permission to download and install any software on your machine, don't worry as you can [use this cloud-based cURL tool](http://onlinecurl.com) instead!
 2. An instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
   * You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- Just copy this to your clipdboard and paste it into the example code wherever it's called for during an exercise.
-  * Or, if you have your own instance of VersionOne Lifecycle already, see the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+  * Or, if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
 
 ### Setup
 
