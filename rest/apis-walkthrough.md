@@ -22,18 +22,43 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 
 You'll need just two things:
 
-1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client
-2. This VersionOne Lifecycle Access Token in your clipboard: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- a credential to authenticate with the REST Data API
+1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client which allows you to query and updatge data in REST APIs very easily. If you don't want to or do not have permission to download and install any software on your machine, don't worry as you can [use this cloud-based cURL tool](http://onlinecurl.com) instead!
+2. An instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
+  * You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- Just copy this to your clipdboard and paste it into the example code wherever it's called for during an exercise.
+  * Or, if you have your own instance of VersionOne Lifecycle already, see the following **Setup** instructions for how to create your own Access Token to use during the exercises.
 
 ### Setup
 
-This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. cURL is available for a huge variety of operating systems. [Download it here](https://curl.haxx.se/download.html) if you don't already have it.
+This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. Alternatively, you can simply use the free cloud-based cURL service at http://onlinecurl.com. 
 
-Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing enter. 
+#### Installing cURL
+
+cURL is available for a huge variety of operating systems:
+
+* If you are running the Windows operating system, the easiest way to get a copy of cURL for your machine is to download and install [Git for Windows](https://git-for-windows.github.io/), and then open the Git Bash prompt.
+* If you are another operating system or prefer to install a stand-alone copy of cURL, we suggest you visit the [Download Wizard](https://curl.haxx.se/dlwiz/) to select the correct package for your system.
+
+#### Using cURL
+
+Now you're ready to roll!
+
+##### Simple test against Google
+
+Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing **Enter**. 
 
 You should then see a result like this:
 
 ![cURL Google](https://cloud.githubusercontent.com/assets/1863005/16272737/f3fd2c50-386c-11e6-864f-408abbe67a86.png)
+
+**Note:** If you are using the Onlinecurl.com service instead, then you can simply paste each example command into the prompt on the page and click the **START YOUR CURL** button: 
+
+![onlinecurl.com Prompt](https://cloud.githubusercontent.com/assets/1863005/16852534/7d7deff8-49d6-11e6-9a5e-09567b710923.png)
+
+Then, you should see a result like this:
+
+![onlinecurl example result](https://cloud.githubusercontent.com/assets/1863005/16852757/5c45934e-49d7-11e6-84a1-4c0247325327.png)
+
+##### Test against VersionOne Lifecycle
 
 Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
 
