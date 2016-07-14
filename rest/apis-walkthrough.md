@@ -190,7 +190,7 @@ Combining the base Data API URL, `https://www16.v1host.com/api-examples/rest-1.v
 Now that you have the asset's Data API URL, you can fetch it with cURL using this command:
 
 ```curl
-curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384="
+curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384='
 ```
 
 #### Expected result
@@ -242,7 +242,7 @@ You should get back a result that looks like this:
 To see the result as JSON, run this cURL command:
 
 ```curl
-curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H "Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384=" -H "Accept:application/json"
+curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384=' -H 'Accept:application/json'
 ```
 
 #### Expected result
