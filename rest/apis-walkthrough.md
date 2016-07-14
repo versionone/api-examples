@@ -36,7 +36,7 @@ This walkthrough assumes you are on a system that can run the popular **cURL** c
 cURL is available for a huge variety of operating systems:
 
 * If you are running the Windows operating system, the easiest way to get a copy of cURL for your machine is to download and install [Git for Windows](https://git-for-windows.github.io/), and then open the Git Bash prompt.
-* If you are another operating system or prefer to install a stand-alone copy of cURL, we suggest you visit the [Download Wizard](https://curl.haxx.se/dlwiz/) to select the correct package for your system.
+* If you are using another operating system or prefer to install a stand-alone copy of cURL, we suggest you visit the [Download Wizard](https://curl.haxx.se/dlwiz/) to select the correct package for your system.
 
 #### Using cURL
 
