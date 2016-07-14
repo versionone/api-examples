@@ -423,7 +423,7 @@ curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H 'Autho
 ### Review
 At this point, you should know how to do the two tasks described in the beginning. Also note:
 * You can find the `oidToken` for almost all asset types in the same way you just did for Scope
-* The XML and JSON output you see above is the **default** representation of the asset, but there are many more parameters and options for customizing query results. Continue to _Exercise 2: Query a Scope for specific attributes_ to learn about the `sel` parameter.
+* The XML and JSON output you see above is the **default** representation of the asset, but there are many more parameters and options for customizing query results. Continue to _Exercise 3: Query a Scope for specific attributes_ to learn about the `sel` parameter.
 
 # Exercises 3 - 7 
 
