@@ -95,7 +95,7 @@ where:
 
 # Idea 2: Extend capabilities of the YAML syntax to support writing
 
-Leaving aside the question of whether we introduce a new `write.v1` or just enhance the existing `query.v1` endpoint, here are some ideas:
+Leaving aside the question of whether we introduce a new `write.v1` or just enhance the existing `query.v1` endpoint, here are some ideas. **Note about JSON**: keep in mind that while these examples are done in YAML for simplicity of typing, we would want to implement this such that it supports both YAML and JSON.
 
 ## Support POSTing new Assets and updates
 
@@ -135,32 +135,74 @@ attributes:
   - Member:50
 ```
 
-## Support POSTing a query + transform operation over the results
+## Support updating attributes against one or more assets via POST
+
+Customers and internal V1 developers have long craved the ability to update multiple assets in a single query, much like a SQL `update` statement. 
+
+In the simplest case, how about updating a single asset given its OID token?
+
+```yaml
+update: Story:12345
+attributes:
+ Name: "New story name"
+ Description: "New description"
+ ```
+ 
+But, what if you want to update **all Story assets** to set their Status to 'Future'. Here's a proposed syntax:
+
+```yaml
+update: Story
+attributes:
+ Status: StoryStatus:133 # Even better if we can add in support for Status: Future
+```
 
 Suppose you want to query all stories currently owned by `Member:57` and replace the owner with `Member:99`, like after someone leaves the company. Here's a proposed syntax:
 
-```
-from: Story
+```yaml
+update: Story
 filter:
 - Owners=Member:57
-apply:
- attributes:
-  Owners:
-   replace:
-   - Member:57
-   - Member:99
+attributes:
+ Owners:
+  replace:
+  - Member:57
+  - Member:99
 ```
 
-What if you wanted to clear out the `Owners` attribute of all stories in iteration and set the status to Future
+More typically, you'd want to update assets within a given iteration or other container, like a Scope, not a blanket update of everything in the system! So, what if you wanted to clear out the `Owners` attribute of all stories in "Iteration 1" and set the status to Future? How about this syntax:
 
-```
-from: Story
+```yaml
+update: Story
 where:
  Timebox.Name="Iteration 1"
-apply:
- attributes:
-  Owners: clear
-  Status: StoryStatus:133 # Even better if we can add in support for Status: Future
+attributes:
+ Owners: clear
+ Status: StoryStatus:133 # Even better if we can add in support for Status: Future
+```
+
+How about updating the related assets of one or more assets? Here's an idea of what that could look like for updating some top-level attributes on all matched Stories, and an attribute on one or more related `Children`. This would modify the Asset
+
+```yaml
+update: Story
+where:
+ Timebox.Name="Iteration 1"
+attributes:
+ Status: Future # Assuming we implement this
+ Children:
+  attributes:
+   AssetState: 0
+```
+
+Alternatively, suppose you wanted to actually delete all the Children of matching Story assets. Here's a proposed syntax:
+
+```yaml
+update: Story
+where:
+ Timebox.Name="Iteration 1"
+attributes:
+ Status: Future # Assuming we implement this
+ Children:
+  execute: Delete # Execute the Delete operation on each related asset in the Children relation
 ```
 
 ## Support POSTing batching of new Assets and updates in a single payload
@@ -192,7 +234,7 @@ Now, you may ask yourself, "What if I want the two new stories to be workitems W
 
 Good question, here's a proposed syntax:
 
-```
+```yaml
 asset: Scope
 attributes:
  Name: New Scope with Workitems
