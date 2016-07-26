@@ -207,6 +207,16 @@ attributes:
   execute: Delete # Execute the Delete operation on each related asset in the Children relation
 ```
 
+**Note:** Because `Task` and `Test` assets actually have their own `Timebox` relation, the above approach is not actually necessary, but is more of a demonstration. The following is shorter and would work, but requires you to manually supply the `AssetType` values. In this context, `"Test","Task"` performs an OR operation to match all:
+
+```yaml
+update: Workitem
+where:
+ Timebox.Name="Iteration 1"
+ AssetType: "Test","Task"
+execute: Delete
+```
+
 ## Support POSTing batching of new Assets and updates in a single payload
 
 Because YAML makes it easy to separate multiple documents, we can easily support batch requests:
