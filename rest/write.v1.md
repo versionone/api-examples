@@ -139,7 +139,7 @@ attributes:
 
 Customers and internal V1 developers have long craved the ability to update multiple assets in a single query, much like a SQL `update` statement. 
 
-In the simplest case, how about updating a single asset given its OID token?
+In the simplest case, and as an alias for the scenario already described above, how about updating a single asset given its OID token?
 
 ```yaml
 update: Story:12345
@@ -155,6 +155,8 @@ update: Story
 attributes:
  Status: StoryStatus:133 # Even better if we can add in support for Status: Future
 ```
+
+**Note:** using the `update` token would differentiate this from a create command. Although, if just using `asset` in terms of both create and update is confusing, we could always just use `create: Story`.
 
 Suppose you want to query all stories currently owned by `Member:57` and replace the owner with `Member:99`, like after someone leaves the company. Here's a proposed syntax:
 
