@@ -1,9 +1,7 @@
 How can I close multiple Defects
-
 https://versiononesupport.zendesk.com/agent/tickets/20919
 
 API Script to delete projects
-
 https://versiononesupport.zendesk.com/agent/tickets/4559
 
 Script/function to close all completed tasks
@@ -24,12 +22,14 @@ https://versiononesupport.zendesk.com/agent/tickets/782
 Question Regarding Deactivation of users in VersionOne
 https://versiononesupport.zendesk.com/agent/tickets/7574
 
-
 Deleting Inbox Notifications
 https://versiononesupport.zendesk.com/agent/tickets/19010
 
 Deleting stuff in my V1 Inbox
 https://versiononesupport.zendesk.com/agent/tickets/3566
+
+best way to copy/move all project assets to new project
+https://versiononesupport.zendesk.com/agent/tickets/1570
 
 Question on bulk upload
 https://versiononesupport.zendesk.com/agent/tickets/3589
