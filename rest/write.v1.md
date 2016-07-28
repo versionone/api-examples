@@ -6,6 +6,8 @@ Additionally, customers have long desired the ability to do batch commands for c
 
 # Customer Tickets
 
+Each of these tickets express a desire for these kinds of features:
+
 ## How can I close multiple Defects
 https://versiononesupport.zendesk.com/agent/tickets/20919
 
