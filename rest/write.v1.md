@@ -2,7 +2,52 @@
 
 The [query.v1](https://community.versionone.com/Developers/Developer-Library/Sample_Code/Tour_of_query.v1) endpoint has been around for a while and provides powerful support and simple SQL-like syntax for reading Assets from VersionOne Lifecycle. Customers trying to use this endpoint find it useful, though they do sometimes have trouble constructing YAML strings inside of a language like Java that does not support multi-line strings.
 
-There are a number of things we can do to improve this, all while retaining the power and flexibility of the `query.v1` endpoint.
+Additionally, customers have long desired the ability to do batch commands for creating and updating assets, including updating multiple assets with a single command similar to SQL `update` commands.
+
+# Customer Tickets
+
+## How can I close multiple Defects
+https://versiononesupport.zendesk.com/agent/tickets/20919
+
+## API Script to delete projects
+https://versiononesupport.zendesk.com/agent/tickets/4559
+
+## Script/function to close all completed tasks
+https://versiononesupport.zendesk.com/agent/tickets/24156
+
+## API to deactivate members
+https://versiononesupport.zendesk.com/agent/tickets/11352
+
+## Move Test Suites
+https://versiononesupport.zendesk.com/agent/tickets/2502
+
+## Bulk field update
+https://versiononesupport.zendesk.com/agent/tickets/26001
+
+## Deleting over 4500 BZ entries in V1
+https://versiononesupport.zendesk.com/agent/tickets/782
+
+## Question Regarding Deactivation of users in VersionOne
+https://versiononesupport.zendesk.com/agent/tickets/7574
+
+## Deleting Inbox Notifications
+https://versiononesupport.zendesk.com/agent/tickets/19010
+
+## Deleting stuff in my V1 Inbox
+https://versiononesupport.zendesk.com/agent/tickets/3566
+
+## Best way to copy/move all project assets to new project
+https://versiononesupport.zendesk.com/agent/tickets/1570
+
+## Question on bulk upload
+https://versiononesupport.zendesk.com/agent/tickets/3589
+
+## Customer looks forward to updating multiple assets with a single command
+https://versiononesupport.zendesk.com/agent/tickets/26754
+
+# Improvement Ideas
+
+Firstly, regarding `query.v1`, there are a number of things we can do to improve this, all while retaining the power and flexibility of the `query.v1` endpoint.
 
 # Idea 1: Add a fluent interface for building YAML queries
 
