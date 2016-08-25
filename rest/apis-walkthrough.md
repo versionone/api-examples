@@ -36,12 +36,6 @@ b.  if you have your own instance of VersionOne Lifecycle already, see the last 
 
 ##### Simple test against Google
 
-Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing **Enter**. 
-
-You should then see a result like this:
-
-![cURL Google](https://cloud.githubusercontent.com/assets/1863005/16272737/f3fd2c50-386c-11e6-864f-408abbe67a86.png)
-
 **Note:** If you are using the Onlinecurl.com service instead, then you can simply paste each example command into the prompt on the page and click the **START YOUR CURL** button: 
 
 ![onlinecurl.com Prompt](https://cloud.githubusercontent.com/assets/1863005/16852534/7d7deff8-49d6-11e6-9a5e-09567b710923.png)
