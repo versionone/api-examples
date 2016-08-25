@@ -24,7 +24,7 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 
 This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
-###STEP 1: SETUP
+###STEP 1: Setup
 
 In order to do these exercises we need to select two things:
 
@@ -39,7 +39,7 @@ b. Your own instance of VersionOne Lifecycle -- if you have your own instance of
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
-###STEP 2: TEST AGAINST GOOGLE
+###STEP 2: Test Against Google
 
 
 **Note:** If you are using the Onlinecurl.com service instead, then you can simply paste each example command into the prompt on the page and click the **START YOUR CURL** button: 
@@ -72,11 +72,11 @@ Before moving to the exercises, note that if you want to adapt them to run again
 
 #### Review
 
-Don't worry if you don't understand much about the URLs or the results you've seen yet. You'll learn all about that starting in _Exercise 1: Understand the REST Data API fundamentals_.
+Don't worry if you don't understand much about the URLs or the results you've seen yet. You'll learn all about that starting in _Exercise 2: Understand the REST Data API fundamentals_.
 
 OK, let's go!
 
-## Exercise 1: Understand the REST Data API fundamentals
+## Exercise 2: Understand the REST Data API fundamentals
 
 This exercise teaches you the fundamental concepts about the REST Data API.
 
@@ -126,7 +126,7 @@ Thus, to construct the address for the `Member:20` asset, you start by breaking 
 
 TODO
 
-## Exercise 2: Find a Scope (Project) OID Token in the UI
+## Exercise 3: Find a Scope (Project) OID Token in the UI
 
 Now that you understand what an OID Token is and how to construct a Data API URL for an asset with it, you can start using the API!
 
@@ -416,7 +416,7 @@ At this point, you should know how to do the two tasks described in the beginnin
 * You can find the `oidToken` for almost all asset types in the same way you just did for Scope
 * The XML and JSON output you see above is the **default** representation of the asset, but there are many more parameters and options for customizing query results. Continue to _Exercise 3: Query a Scope for specific attributes_ to learn about the `sel` parameter.
 
-# Exercises 3 - 7 
+# Exercises 4 - 8 
 
 TODO 
 
