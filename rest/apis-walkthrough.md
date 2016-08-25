@@ -54,13 +54,13 @@ Then, you should see a result like this:
 Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
 
 ```shell
-curl 'http://domain/path' -H 'Authorization:Bearer <access token>'
+ 'http://domain/path' -H 'Authorization:Bearer <access token>'
 ```
 
 For example, to get the details of the Admin Member from our VersionOne Lifecycle examples instance, run this cURL command:
 
 ```shell
-curl 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384='
+ 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384='
 ```
 You should then see a result like this:
 
