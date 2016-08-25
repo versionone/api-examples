@@ -11,20 +11,20 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 You'll step through seven brief exercises to complete this walkthrough. Each one builds upon knowledge gained in the previous one.
 
 * Exercise 0: Getting Started
-* Exercise 0.5 Access a VersionOne Instance
-* Exercise 1: Understand the REST Data API fundamentals
-* Exercise 2: Find a Scope (Project) OID Token in the UI
-* Exercise 3: Query a Scope for specific attributes
-* Exercise 4: Create your own Story (Backlog Item) within a Scope
-* Exercise 5: Query your Story
-* Exercise 6: Update your Story
-* Exercise 7: Close your Story!
+* Exercise 1 Access a VersionOne Instance
+* Exercise 2: Understand the REST Data API fundamentals
+* Exercise 3: Find a Scope (Project) OID Token in the UI
+* Exercise 4: Query a Scope for specific attributes
+* Exercise 5: Create your own Story (Backlog Item) within a Scope
+* Exercise 6: Query your Story
+* Exercise 7: Update your Story
+* Exercise 8: Close your Story!
 
 ## Exercise 0: Getting Started 
 
 This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
-STEP 1: Setup
+*STEP 1: Setup*
 
 In order to do these exercises we need to select two things:
 
