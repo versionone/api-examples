@@ -10,6 +10,7 @@ This hands-on walkthrough shows you the basics for how to perform four types of 
 
 You'll step through seven brief exercises to complete this walkthrough. Each one builds upon knowledge gained in the previous one.
 
+* Exercise 0: Getting Started
 * Exercise 1: Understand the REST Data API fundamentals
 * Exercise 2: Find a Scope (Project) OID Token in the UI
 * Exercise 3: Query a Scope for specific attributes
@@ -18,18 +19,25 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 * Exercise 6: Update your Story
 * Exercise 7: Close your Story!
 
-## How to try this against our public test instance
+## Exercise 1: Getting Started 
 
-You'll need just two things:
+This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
-1. [cURL](https://curl.haxx.se) -- a popular command-line HTTP client which allows you to query and updatge data in REST APIs very easily. If you don't want to or do not have permission to download and install any software on your machine, don't worry as you can [use this cloud-based cURL tool](http://onlinecurl.com) instead!
-2. An instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
-  * You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- Just copy this to your clipdboard and paste it into the example code wherever it's called for during an exercise.
-  * Or, if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+In order to do these exercises we need to select two things:
+
+1. [Online Curl] -- htp://onlinecurl.com.  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
+
+2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
+ Select one of the following options for a VersionOne Lifecycle instance:
+
+a. You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` -- Just copy this to your clipdboard and paste it into the example code wherever it's called for during an exercise.
+
+b.  if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+
 
 ### Setup
 
-This walkthrough assumes you are on a system that can run the popular **cURL** command-line HTTP client. Alternatively, you can simply use the free cloud-based cURL service at http://onlinecurl.com. 
+
 
 #### Installing cURL
 
