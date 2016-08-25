@@ -34,22 +34,6 @@ a. You can use our public API examples testing instance, located at https://www1
 
 b.  if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
 
-
-### Setup
-
-
-
-#### Installing cURL
-
-cURL is available for a huge variety of operating systems:
-
-* If you are running the Windows operating system, the easiest way to get a copy of cURL for your machine is to download and install [Git for Windows](https://git-for-windows.github.io/), and then open the Git Bash prompt.
-* If you are using another operating system or prefer to install a stand-alone copy of cURL, we suggest you visit the [Download Wizard](https://curl.haxx.se/dlwiz/) to select the correct package for your system.
-
-#### Using cURL
-
-Now you're ready to roll!
-
 ##### Simple test against Google
 
 Once you have cURL installed, you can try it against a test URL, like Google, by simply typing `curl 'http://www.google.com'` and pressing **Enter**. 
