@@ -24,7 +24,7 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 
 This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
-*STEP 1: Setup*
+###STEP 1: SETUP
 
 In order to do these exercises we need to select two things:
 
@@ -39,7 +39,7 @@ b. Your own instance of VersionOne Lifecycle -- if you have your own instance of
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
-STEP 2: Test against Google
+###STEP 2: TEST AGAINST GOOGLE
 
 
 **Note:** If you are using the Onlinecurl.com service instead, then you can simply paste each example command into the prompt on the page and click the **START YOUR CURL** button: 
@@ -50,7 +50,7 @@ Then, you should see a result like this:
 
 ![onlinecurl example result](https://cloud.githubusercontent.com/assets/1863005/16852757/5c45934e-49d7-11e6-84a1-4c0247325327.png)
 
-## Exercise 0.5: Access a VersionOne Instance:  
+## Exercise 1: Access a VersionOne Instance:  
 Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
 
 ```shell
