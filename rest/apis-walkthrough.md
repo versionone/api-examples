@@ -48,7 +48,7 @@ Now that you have the tools that you need, lets run a test by using Google.com.
 
 Then, you should see a result like this:
 
-![onlinecurl example result]C:\Users\mirvin\Pictures\New folder\pic_1_member_20_query.png
+![onlinecurl example result](https://cloud.githubusercontent.com/assets/1863005/16852757/5c45934e-49d7-11e6-84a1-4c0247325327.png)
 
 ## Exercise 1: Access a VersionOne Instance:  
 Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
