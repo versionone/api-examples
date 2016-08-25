@@ -20,7 +20,7 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 * Exercise 6: Update your Story
 * Exercise 7: Close your Story!
 
-## Exercise 1: Getting Started 
+## Exercise 0: Getting Started 
 
 This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
@@ -50,8 +50,7 @@ Then, you should see a result like this:
 
 ![onlinecurl example result](https://cloud.githubusercontent.com/assets/1863005/16852757/5c45934e-49d7-11e6-84a1-4c0247325327.png)
 
-## Access a VersionOne Instance
-
+## Exercise 0.5: Access a VersionOne Instance:  
 Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
 
 ```shell
