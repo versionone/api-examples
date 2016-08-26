@@ -64,8 +64,7 @@ For example, to get the details of the Admin Member from our VersionOne Lifecycl
 ```
 You should then see a result like this:
 
-![cURL VersionOne Lifecycle Admin Member](https://cloud.githubusercontent.com/assets/1863005/16494319/e8b463cc-3eb6-11e6-9993-22afc846b8ad.png)
-
+![cURL VersionOne Lifecycle Admin Member](https://cloud.githubusercontent.com/assets/259870/18010813/22cf2cea-6b80-11e6-98f4-cadb5fcb45d1.png)
 #### How to try this against your own VersionOne Lifecycle instance
 
 Before moving to the exercises, note that if you want to adapt them to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
