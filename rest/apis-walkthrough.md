@@ -28,7 +28,7 @@ This exercise is a warm-up exercise that will guide you throught the process of 
 
 In order to do these exercises we need to select two things:
 
-1. [Online Curl] -- htp://onlinecurl.com.  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
+1. [Online Curl] -- http://onlinecurl.com.  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
 
 2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
  Select one of the following options for a VersionOne Lifecycle instance: 
