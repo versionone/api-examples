@@ -37,7 +37,7 @@ In order to do these exercises we need to select two things:
    b. Access Token -- We have created an access token for you to use.  It is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`.  Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
 
  
- NOTE: If you decide to use your own instance of VersionOne Lifecycle, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+ NOTE: If you decide to use your own instance of VersionOne Lifecycle, see the last section in the following **Step 2** instructions titled "How to try this against your own VersionOne Lifecycle instance".
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
@@ -87,7 +87,7 @@ This exercise teaches you the fundamental concepts about the REST Data API.
 
 ### Step 1: Construct the base Data API URL for our examples instance
 
-Assuming you are following along with our public examples instance, then the instance URL is:
+Recall that the instance URL that we will be using is:
 
 `https://www16.v1host.com/api-examples`
 
@@ -97,15 +97,8 @@ Given this starting point, the REST Data API endpoint is simple to construct by 
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data`
 
-### Step 2: Construct the base Data API URL for your own instance
 
-If, however, you are using your own VersionOne Lifecycle instance, then you may have a different host and will definitely have a different instance name.
-
-If, for example, your instance URL is `https://www7.v1host.com/acme`, then the REST Data API endpoint for that instance will be:
-
-`https://www7.v1host.com/acme/rest-1.v1/Data`
-
-### Step 3: Construct the Data API URL for an asset
+### Step 2: Construct the Data API URL for an asset
 
 As you probably already know from using VersionOne Lifecycle, the business objects within the system are called [assets](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset). All assets in a particular instance are identified by the combination of their [asset type](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/Asset_Type) and a unique integer collectively called an [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token). 
 
@@ -121,7 +114,7 @@ Thus, to construct the address for the `Member:20` asset, you start by breaking 
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data/Member/20`
 
-### Step 4: Understand the XML and JSON Data API response formats
+### Step 3: Understand the XML and JSON Data API response formats
 
 TODO
 
