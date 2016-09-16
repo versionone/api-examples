@@ -24,11 +24,11 @@ You'll step through seven brief exercises to complete this walkthrough. Each one
 
 This exercise is a warm-up exercise that will guide you throught the process of selecting a web client and use it to go to Google.com. 
 
-###STEP 1: Setup
+###Step 1: Setup
 
 In order to do these exercises we need to select two things:
 
-1. [Online Curl] -- http://onlinecurl.com.  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
+1. [Online Curl](http://onlinecurl.com).  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
 
 2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
  Select one of the following options for a VersionOne Lifecycle instance: 
@@ -39,10 +39,8 @@ In order to do these exercises we need to select two things:
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
-###STEP 2: Test Against Google
+###Step 2: Test Against Google
 
-
-**Note:** If you are using the Onlinecurl.com service instead, then you can simply paste each example command into the prompt on the page and click the **START YOUR CURL** button: 
 
 ![onlinecurl.com Prompt](https://cloud.githubusercontent.com/assets/1863005/16852534/7d7deff8-49d6-11e6-9a5e-09567b710923.png)
 
@@ -67,7 +65,7 @@ You should then see a result like this:
 ![cURL VersionOne Lifecycle Admin Member](https://cloud.githubusercontent.com/assets/259870/18010813/22cf2cea-6b80-11e6-98f4-cadb5fcb45d1.png)
 #### How to try this against your own VersionOne Lifecycle instance
 
-Before moving to the exercises, note that if you want to adapt them to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
+Before moving to the remaining exercises, note that if you want to adapt them to run against your own instance of VersionOne Lifecycle, you'll need to [generate an Access Token as described in the VersionOne Community site](https://community.versionone.com/Help-Center/Lifecycle_System_Asset_Diagram_and_Descriptions/Managing_Your_Member_Account_Details/Authorizing_Application_Access). Once you've generated the token, simply use that token and your own instance URL in place of the token and URL that the exercises contain.
 
 #### Review
 
@@ -138,7 +136,7 @@ While this exercise may seem basic, it provides a solid foundation for you to le
 ### What you'll learn
 
 * How to find the [OID Token](https://community.versionone.com/Developers/Developer-Library/Platform_Concepts/OID_Token) of a Scope within the VersionOne Lifecycle UI
-* How to use the numeric porition of an OID Token to get the default API representation of a Scope using cURL
+* How to use the numeric portion of an OID Token to get the default API representation of a Scope using cURL
 
 ### Step 1: View the Projects page in Lifecycle
 
@@ -154,7 +152,7 @@ Click the project named `VersionOne Lifecycle REST APIs 101` to open it in a dia
 
 ![Project dialog](https://cloud.githubusercontent.com/assets/1863005/16241937/0db32aaa-37be-11e6-833d-db14e9df21d4.png)
 
-Clicking that will open the Project in a fullscreen window or tab, like below:
+Clicking that will open the Project in a full screen window or tab, like below:
 
 ![Project fullscreen](https://cloud.githubusercontent.com/assets/1863005/16242154/137459cc-37bf-11e6-9774-a803562f9062.png)
 
