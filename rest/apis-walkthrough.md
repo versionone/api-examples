@@ -30,12 +30,13 @@ In order to do these exercises we need to select two things:
 
 1. [Online Curl](http://onlinecurl.com).  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
 
-2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
- Select one of the following options for a VersionOne Lifecycle instance: 
+2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API. 
+   a. VersionOne Instance -- For this excercise, you will be using a public instance of VersionOne Lifecycle found here at https://www16.v1host.com/api-examples.  . 
 
-   a. VersionOne Lifecycle Public -- You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
+   b. Access Token -- We have created an access token for you to use.  It is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`.  Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
 
-   b. Your own instance of VersionOne Lifecycle -- if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+ 
+ NOTE: If you decide to use your own instance of VersionOne Lifecycle, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
@@ -49,7 +50,7 @@ Then, you should see a result like this:
 ![onlinecurl example result](https://cloud.githubusercontent.com/assets/1863005/16852757/5c45934e-49d7-11e6-84a1-4c0247325327.png)
 
 ## Exercise 1: Access a VersionOne Instance:  
-Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use an Access Token. The value of the token is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=` for our example instance. Using this with cURL is easy. Here is the format:
+Unlike Google's public web site, the VersionOne Lifecycle APIs require authentication/authorization. So, you'll need to use the  Access Token that we mentioned in the previous setup step (1.aBg7sVXSZeEsf3cwvQFEdkkt384=) for our example instance. Using this with cURL is easy. Here is the format:
 
 ```shell
  'http://domain/path' -H 'Authorization:Bearer <access token>'
