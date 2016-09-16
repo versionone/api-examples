@@ -31,6 +31,7 @@ In order to do these exercises we need to select two things:
 1. [Online Curl](http://onlinecurl.com).  This tool will allow you to act like a browser, connect to VersionOne, query VersionOne and view the resulting data.  We prefer that you use the cloud based, Online Curl but if you are so inclined or you already have it installed, feel free to use the command line version of cURL. (https://curl.haxx.se)
 
 2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API. 
+ 
    a. VersionOne Instance -- For this excercise, you will be using a public instance of VersionOne Lifecycle found here at https://www16.v1host.com/api-examples.  . 
 
    b. Access Token -- We have created an access token for you to use.  It is `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`.  Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
