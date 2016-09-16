@@ -33,9 +33,9 @@ In order to do these exercises we need to select two things:
 2. VersionOne Lifecycle -- You will need an instance of VersionOne Lifecycle and an Access Token with which to authenticate against its REST API:
  Select one of the following options for a VersionOne Lifecycle instance: 
 
-a. VersionOne Lifecycle Public -- You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
+   a. VersionOne Lifecycle Public -- You can use our public API examples testing instance, located at https://www16.v1host.com/api-examples. If you use this, then please use the following ready-made Access Token: `1.aBg7sVXSZeEsf3cwvQFEdkkt384=`. Copy this token to your clipdboard and paste it into the example code wherever it's called for during an exercise.
 
-b. Your own instance of VersionOne Lifecycle -- if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
+   b. Your own instance of VersionOne Lifecycle -- if you have your own instance of VersionOne Lifecycle already, see the last section in the following **Setup** instructions for how to create your own Access Token to use during the exercises.
 
 Now that you have the tools that you need, lets run a test by using Google.com.
  
