@@ -175,7 +175,7 @@ Combining the base Data API URL, `https://www16.v1host.com/api-examples/rest-1.v
 
 `https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005`
 
-Now that you have the asset's Data API URL, you can fetch it with cURL by entering this in Online Curl:
+Now that you have the asset's Data API URL, you can fetch it with by entering this in Online Curl:
 
 ```curl
 'https://www16.v1host.com/api-examples/rest-1.v1/Data/Scope/1005' -H 'Authorization:Bearer 1.aBg7sVXSZeEsf3cwvQFEdkkt384='
