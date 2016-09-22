@@ -16,5 +16,4 @@ Included Examples
 =================
 
  * Update assets from Excel using COM automation to read Excel sheet.  Python on windows.
- * Output HTML to print Task or Story cards.  Python.
- * 
+ * Output HTML to print Task or Story cards.  Python. 
