@@ -1,3 +1,19 @@
+# Ideas about Market Place / Extensibility
+* Allow reusable UI components from Lifecycle to be easily used inside of an add-on to run within Lifecycle.
+  * Data to populate components can be sourced from Lifecycle data APIs
+  * Or, data can come from their own data APIs
+
+# General API Needs
+
+## Batch Support
+* JSON / YAML based (forget XML)
+* Batch attribute update based on query results
+ * Allow nested updates
+* Batch operation execution based on query results
+ * Allow nested execution
+* Batch create parent-child / asset graphs with implicit relationships automatically wired up
+* WebHooks (probably based on ActivityStream)
+
 # Current ideas and spikes for API improvements and new APIs
 
 ## Replace .NET API Client with new lightweight client
