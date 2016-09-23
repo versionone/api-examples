@@ -29,8 +29,9 @@ To become ready for Marketplace, we need to improve our APIs. The following outl
  * Note: consider using hot-deployment of the `VersionOne.Module.AssetsApi` or other new features
    * Related: Partners could also just get a build from us and install locally, but with a Hot-deployment capability, this could allow them to start crafting their own `api/partner-integration` endpoint without needing any access to our proprietary code base
 * WebHooks (probably based on ActivityStream)
-* 
+
 ## Marketplace
+
 TODO
 
 ![image](https://cloud.githubusercontent.com/assets/1863005/18800840/49766168-81ad-11e6-919a-014c5f80786d.png)
