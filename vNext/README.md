@@ -21,7 +21,7 @@ To become ready for Marketplace, we need to improve our APIs. The following outl
  * Add wish list in GitHub for supporting multiple-level-deep query based update and execution support. See if anyone bites.
    * If nobody bites and sends a pull-request, we can of course implement this ourselves, but it should **not** come before iterating through the remainder of this list. Instead it should be a later iteration.
 * Continuous deployment build with Troy/Q's help on Azure or Skytap for our new and improved APIs -- we can point our "early adopter", elite group at this instance to get feedback without disrupting the main Lifecycle process
- * Parnters can start using this build to prototype their own enhancements based upon the new batch API at `/api/Assets`!
+ * Partners can start using this build to prototype their own enhancements based upon the new batch API at `/api/Assets`!
  * Services team members like Jess can use whatever code library or no library they damn well please to take advantage of this new API (he doesn't use our SDKs, just in case you were wondering he prefers strings)
  * Invite power coders from support tickets to try things out or go visit them in Atlanta and observe them
  * At the same time, be creating the **Success Stories** and **Case Studies** that demonstrate the value we are creating with these early pioneers
