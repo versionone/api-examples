@@ -1,18 +1,43 @@
+# API Powerups Improvements Roadmap
+
+![image](https://cloud.githubusercontent.com/assets/1863005/18800840/49766168-81ad-11e6-919a-014c5f80786d.png)
+
+## Lifecycle external
+
+* [API Documentation Improvements (Walkthrough exercises)](https://www7.v1host.com/V1Production/Epic.mvc/Summary?oidToken=Epic%3A845027) by V1 -- power up end users, support team, broader dev team, services team
+* MetaTrain into builds by V1, Community -- power up everyone who writes queries against Lifecycle, seriously everyone, and even those who don't write them
+ * Blog about it, and 
+ * Add wish list for improvements to GitHub issues list, and encourage active community participation and pull-requests with rewards
+* Meta-Free Fluent Query support in .NET API Client by V1 -- power up .NET users using our SDK (and power down the extra keystrokes, and extra support tickets dealing with the verbose nature of meta-based `IAttributeDefinition`, `FilterTerm`, `Services`, and family)
+* Fluent Query support in JS Client by V1 -- same benefits as above, but also introduce CONSISTENCY across our clients
+* Update Walkthrough exercises to link to .NET and JavaScript client samples to parallel the `cURL` samples
+* Fluent Query support in Java by Community -- seek community contribution for this with consistency with the .NET and JS clients
+* Fluenty Query support in Python by Community -- seek community contribution for this with consistency with .NET and JS clients
+
+## Lifecycle internal
+
+* Module for batch support in API at `/api/Assets` (or whatever) by V1, Community -- provide YAML/JSON asset creation for a complete tree of assets plus single-level deep query-based update and execute operation support. (Piggy back on query.v1 for fetching the assets, but still implement in C#)
+ * This module should itself be open-source, taking a dependency upon nothing more than `VersionOne.Contract`
+ * Add wish list in GitHub for supporting multiple-level-deep query based update and execution support. See if anyone bites.
+  * If nobody bites and sends a pull-request, we can of course implement this ourselves, but it should come before the next few improvements, instead it should be an iterative improvement later.
+* Continuous deployment build with Troy/Q's help on Azure or Skytap for our new and improved APIs -- we can point our "early adopter", elite group at this instance to get feedback without disrupting the main Lifecycle process
+ * Parnters can start using this build to prototype their own enhancements based upon the new batch API at `/api/Assets`!
+ * Services team members like Jess can use whatever code library or no library they damn well please to take advantage of this new API (he doesn't use our SDKs, just in case you were wondering he prefers strings)
+ * Invite power coders from support tickets to try things out or go visit them in Atlanta and observe them
+ * At the same time, be creating the **Success Stories** and **Case Studies** that demonstrate the value we are creating with these early pioneers
+  * Once we've delighted these early users and address issues, and have a growing body of GitHub contributions, **only then is it time to roll out the new endpoint for mass consumption** with the complete body of success stories, how-tos, and what's coming already churning
+ * Note: consider using hot-deployment of the `VersionOne.Module.AssetsApi` or other new features
+   * Related: Partners could also just get a build from us and install locally, but with a Hot-deployment capability, this could allow them to start crafting their own `api/partner-integration` endpoint without needing any access to our proprietary code base
+* WebHooks (probably based on ActivityStream)
+* 
+## Marketplace
+
+TODO
+
 # Ideas about Market Place / Extensibility
 * Allow reusable UI components from Lifecycle to be easily used inside of an add-on to run within Lifecycle.
   * Data to populate components can be sourced from Lifecycle data APIs
   * Or, data can come from their own data APIs
-
-# General API Needs
-
-## Batch Support
-* JSON / YAML based (forget XML)
-* Batch attribute update based on query results
- * Allow nested updates
-* Batch operation execution based on query results
- * Allow nested execution
-* Batch create parent-child / asset graphs with implicit relationships automatically wired up
-* WebHooks (probably based on ActivityStream)
 
 # Current ideas and spikes for API improvements and new APIs
 
