@@ -1,6 +1,6 @@
 # API Powerups Improvements Roadmap
 
-![image](https://cloud.githubusercontent.com/assets/1863005/18800840/49766168-81ad-11e6-919a-014c5f80786d.png)
+To become ready for Marketplace, we need to improve our APIs. The following outline provides a roughly sequential, but also iterative, plan for doing so. This is based on many prototypes and feedback from a diverse group of V1ers as well as support customers and Services team members.
 
 ## Lifecycle external
 
@@ -31,8 +31,9 @@
 * WebHooks (probably based on ActivityStream)
 * 
 ## Marketplace
-
 TODO
+
+![image](https://cloud.githubusercontent.com/assets/1863005/18800840/49766168-81ad-11e6-919a-014c5f80786d.png)
 
 # Ideas about Market Place / Extensibility
 * Allow reusable UI components from Lifecycle to be easily used inside of an add-on to run within Lifecycle.
