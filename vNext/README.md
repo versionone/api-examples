@@ -8,7 +8,7 @@ To become ready for Marketplace, we need to improve our APIs. The following outl
 * MetaTrain into builds by V1, Community -- power up everyone who writes queries against Lifecycle, seriously everyone, and even those who don't write them
  * Blog about it, and 
  * Add wish list for improvements to GitHub issues list, and encourage active community participation and pull-requests with rewards
-* Meta-Free Fluent Query support in .NET API Client by V1 -- power up .NET users using our SDK (and power down the extra keystrokes, and extra support tickets dealing with the verbose nature of meta-based `IAttributeDefinition`, `FilterTerm`, `Services`, and family)
+* Meta-Free Fluent Query and YAML Query Builder support in .NET API Client or replacement client ([see links in the section below for detailed example prorotypes](https://github.com/versionone/api-examples/blob/master/vNext/README.md#current-ideas-and-spikes-for-api-improvements-and-new-apis)) by V1 -- power up .NET users using our SDK (and power down the extra keystrokes, and extra support tickets dealing with the verbose nature of meta-based `IAttributeDefinition`, `FilterTerm`, `Services`, and family)
 * Fluent Query support in JS Client by V1 -- same benefits as above, but also introduce CONSISTENCY across our clients
 * Update Walkthrough exercises to link to .NET and JavaScript client samples to parallel the `cURL` samples
 * Fluent Query support in Java by Community -- seek community contribution for this with consistency with the .NET and JS clients
